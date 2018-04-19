@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="left colorbars"></div><div class="right colorbars"></div>
+<div class="about">
+  <img class="portrait" src="assets\icons\top down.png"><img class="landscape" src="assets\icons\left side.png">
+  <div class="wrap">
+    <p class="aboutdesc">Hi! My name is Isabella Broch, and I'm an illustrator and multimedia designer in training. I currently offer commissions for character art. If you're interested, please contact me at: <i>nelizzy@hotmail.com</i>
+    <br><br> I am always learning new things and expanding my skillset.
+    <br><br>Contact me or see more work at:<br>
+      <a href="https://github.com/artizzy/" title="Github"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/isabella-broch-760757161/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="http://instagram.com/artizzyy" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://codepen.io/nelizzy/" title="Codepen"><i class="fab fa-codepen"></i></a>
+    </p>
+    <div class="read-more button"><span class="arrow down"></span></div>
+  </div></div>
+
+<div class="contain">
+<div class="container">
+
+  {% for block in site.data.artwork.art %}
+
+  <img src="{{block.preview}}" class="clickme">
+  <div class="modal">
+    <span class="circle exit"><span class="fas fa-times-circle exit"></span></span>
+    <div class="modalcontent">
+      <div class="containers">
+        <div class="text immune" style="font-size:30px; text-align:center;">
+        {{block.title}}
+        </div>
+      </div>
+
+      {% for sect in block.content %}
+      <div class="image containers"><img src="{{sect.image}}" class="immune"></div>
+
+      <div class="containers">
+        <div class="text immune" style="margin-top:-21px;">
+        {{sect.description}}
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+</div>
