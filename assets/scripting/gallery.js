@@ -12,6 +12,11 @@ $(function() {
       .addClass('showing-modal');
 
     target.next(modal).css("display","block");
+
+    target.parent().find(".lazy").each(function() {
+      $(this).attr('src', $(this).attr('data-src'));
+    });
+
   });
 
   modal
