@@ -33,7 +33,7 @@ layout: default
       </div>
 
       {% for sect in block.content %}
-      <div class="image containers"><img src="{{sect.image}}" class="immune"></div>
+      <div class="image containers"><img data-src-lazy="{{sect.image}}" class="lazy immune"></div>
 
       <div class="containers">
         <div class="text immune" style="margin-top:-21px;">

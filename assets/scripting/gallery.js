@@ -7,11 +7,16 @@ $(function() {
     var target = $(this)
     var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
 
+    target.find(".lazy").each(function() {
+      $(this).attr('src', $(this).attr('data-src-lazy'));
+    });
+
     $('body')
       .css('margin-right', scrollBarWidth)
       .addClass('showing-modal');
 
     target.next(modal).css("display","block");
+
   });
 
   modal
